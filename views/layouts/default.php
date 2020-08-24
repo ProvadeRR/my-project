@@ -13,6 +13,8 @@
 
 <?= $nav_bar ?>
 
+<?= $content ?>
+
 </body>
 </html>
 

@@ -21,9 +21,3 @@ if(USER == CLASS_ADMIN): ?>
     </div>
 <?php endif;?>
 
-<style>
-    .main{
-        text-decoration: none;
-    }
-</style>
-

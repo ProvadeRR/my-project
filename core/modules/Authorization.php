@@ -63,6 +63,7 @@ class Authorization extends Database
                 $_SESSION['error'] = 'Вы ввели неверный пароль';
             }
         }
+        Database::Disconnect();
     }
     public static function getRole(){ // Получаем определенную роль на сайте
         if(!self::getAuth())
