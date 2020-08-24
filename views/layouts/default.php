@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<?= $content ?>
+<?= $nav_bar ?>
 
 </body>
 </html>

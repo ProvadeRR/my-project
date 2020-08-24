@@ -3,8 +3,41 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="9858d53f-4d79-4458-9463-a79459722041" name="Default Changelist" comment="" />
+    <list default="true" id="9858d53f-4d79-4458-9463-a79459722041" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/core/modules/AccessControl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings/access.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/main/nav_bar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/main/profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/App.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/App.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/modules/Authorization.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/modules/Authorization.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/users/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/users/Admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/users/DefaultUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/users/DefaultUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/users/Guest.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/users/Guest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/users/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/users/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/libs/translator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/libs/translator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layouts/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/default.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/main/index.php" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +52,9 @@
         <option value="CSS File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1gTFtEUNvHY2nMYZWu1J1lk7oQC" />
   <component name="ProjectViewState">
@@ -52,36 +88,50 @@
       <workItem from="1598165378585" duration="13247000" />
       <workItem from="1598183248692" duration="109000" />
       <workItem from="1598183491104" duration="18193000" />
-      <workItem from="1598258315540" duration="7652000" />
+      <workItem from="1598258315540" duration="8413000" />
+      <workItem from="1598271579924" duration="14258000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state x="746" y="212" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598217193844">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="746" y="212" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1598217193844" />
-    <state x="713" y="242" key="NewPhpClassDialog" timestamp="1598258850889">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2633" y="251" key="NewPhpClassDialog" timestamp="1598281750695">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="713" y="242" key="NewPhpClassDialog/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1598258850889" />
-    <state x="2509" y="486" key="NewPhpFileDialog" timestamp="1598267550916">
+    <state x="2633" y="251" key="NewPhpClassDialog/0.0.1920.1040/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598281750695" />
+    <state x="2509" y="486" key="NewPhpFileDialog" timestamp="1598283394028">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="589" y="468" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1598263190012" />
-    <state x="2509" y="486" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598267550916" />
-    <state x="672" y="208" key="run.anything.popup" timestamp="1598166540688">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2509" y="486" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598283394028" />
+    <state x="2592" y="216" key="run.anything.popup" timestamp="1598283698394">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="672" y="208" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1598166540688" />
-    <state x="679" y="202" width="672" height="678" key="search.everywhere.popup" timestamp="1598260077736">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2592" y="216" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598283698394" />
+    <state x="2599" y="210" width="672" height="705" key="search.everywhere.popup" timestamp="1598283149402">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="679" y="202" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1598260077736" />
-    <state x="2599" y="210" width="672" height="705" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598190027627" />
+    <state x="2599" y="210" width="672" height="705" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598283149402" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

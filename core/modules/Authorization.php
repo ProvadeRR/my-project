@@ -75,11 +75,11 @@ class Authorization extends Database
             {
                 if($result['role_id'] == DEFAULT_USER)
                 {
-                    self::$role = new DefaultUser($result['name'],$result['surname'],$result['NativeLanguage']);
+                    self::$role = new DefaultUser($result['name'],$result['surname'],$result['NativeLanguage'],$result['role_id']);
                 }
                 if($result['role_id'] == ADMIN)
                 {
-                    self::$role = new Admin($result['name'],$result['surname'],$result['NativeLanguage']);
+                    self::$role = new Admin($result['name'],$result['surname'],$result['NativeLanguage'],$result['role_id']);
                 }
             }
         }

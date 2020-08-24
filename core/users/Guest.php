@@ -8,7 +8,7 @@ class Guest extends User
 {
     protected $language = 'ru';
 
-    public function __construct($name, $surname, $language)
+    public function __construct($name, $surname, $language,$role = 'Гость')
     {
 
     }
