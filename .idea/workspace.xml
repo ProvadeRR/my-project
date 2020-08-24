@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9858d53f-4d79-4458-9463-a79459722041" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1gTFtEUNvHY2nMYZWu1J1lk7oQC" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="X:\Программирование\OSPanel\domains\portfolio.ua\public\img" />
+      <recent name="X:\Программирование\OSPanel\domains\portfolio.ua\views\error" />
+      <recent name="X:\Программирование\OSPanel\domains\portfolio.ua\views" />
+      <recent name="X:\Программирование\OSPanel\domains\portfolio.ua\public\bootstrap" />
+      <recent name="X:\Программирование\OSPanel\domains\portfolio.ua\core\modules" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9858d53f-4d79-4458-9463-a79459722041" name="Default Changelist" comment="" />
+      <created>1598130887839</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598130887839</updated>
+      <workItem from="1598130888873" duration="984000" />
+      <workItem from="1598165378585" duration="13247000" />
+      <workItem from="1598183248692" duration="109000" />
+      <workItem from="1598183491104" duration="18193000" />
+      <workItem from="1598258315540" duration="7652000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="746" y="212" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598217193844">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="746" y="212" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1598217193844" />
+    <state x="713" y="242" key="NewPhpClassDialog" timestamp="1598258850889">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="713" y="242" key="NewPhpClassDialog/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1598258850889" />
+    <state x="2509" y="486" key="NewPhpFileDialog" timestamp="1598267550916">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="589" y="468" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1598263190012" />
+    <state x="2509" y="486" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598267550916" />
+    <state x="672" y="208" key="run.anything.popup" timestamp="1598166540688">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="672" y="208" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1598166540688" />
+    <state x="679" y="202" width="672" height="678" key="search.everywhere.popup" timestamp="1598260077736">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="679" y="202" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1598260077736" />
+    <state x="2599" y="210" width="672" height="705" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598190027627" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/core/modules/Authorization.php</url>
+          <line>24</line>
+          <properties>
+            <option name="className" value="\core\modules\Authorization" />
+            <option name="methodName" value="__wakeup" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
