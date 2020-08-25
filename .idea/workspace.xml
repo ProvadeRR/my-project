@@ -23,9 +23,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9858d53f-4d79-4458-9463-a79459722041" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/views/admin/panel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/modules/UrlAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/modules/UrlAction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/modules/ViewGetter.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/modules/ViewGetter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/main/nav_bar.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/main/nav_bar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/main/posts.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/main/posts.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/posts/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/posts/post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/sign/authorization.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/sign/authorization.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +90,7 @@
       <workItem from="1598306281745" duration="28000" />
       <workItem from="1598343309264" duration="8476000" />
       <workItem from="1598358203615" duration="425000" />
-      <workItem from="1598359429358" duration="12801000" />
+      <workItem from="1598359429358" duration="22091000" />
     </task>
     <servers />
   </component>
@@ -105,29 +110,30 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="746" y="212" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598217193844">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2666" y="220" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598387065478">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="746" y="212" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1598217193844" />
+    <state x="2666" y="220" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598387065478" />
     <state x="713" y="242" key="NewPhpClassDialog" timestamp="1598305413835">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="713" y="242" key="NewPhpClassDialog/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1598305413835" />
     <state x="2633" y="251" key="NewPhpClassDialog/0.0.1920.1040/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598281750695" />
-    <state x="2509" y="486" key="NewPhpFileDialog" timestamp="1598361133215">
+    <state x="2509" y="486" key="NewPhpFileDialog" timestamp="1598387080551">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="589" y="468" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1598304932211" />
-    <state x="2509" y="486" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598361133215" />
+    <state x="2509" y="486" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598387080551" />
     <state x="2592" y="216" key="run.anything.popup" timestamp="1598283698394">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="672" y="208" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1598166540688" />
     <state x="2592" y="216" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598283698394" />
-    <state x="2599" y="210" width="672" height="705" key="search.everywhere.popup" timestamp="1598361287206">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="679" y="202" width="672" height="678" key="search.everywhere.popup" timestamp="1598390298194">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="679" y="202" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1598357365074" />
+    <state x="679" y="202" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1598390298194" />
     <state x="2599" y="210" width="672" height="705" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598361287206" />
   </component>
   <component name="XDebuggerManager">

@@ -1,4 +1,4 @@
-<?php foreach ($array as $post):;
+<?php foreach ($data['posts'] as $post):;
     if($post['avaibility'] == true):?>
         <div class="container">
             <div class='jumbotron '>
