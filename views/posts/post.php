@@ -12,7 +12,13 @@
 
     <div class="comentaries" style="margin-top: 150px">
         <form action="../addComentary" method="post">
-            <input class="form-control form-control-lg" name='comentary' type="text" placeholder="Введите комментарий">
+            <input class="form-control form-control-lg" name='comentary' type="text" placeholder="<?php if(isset($_SESSION['error']))
+            {
+                echo $_SESSION['error'];
+            unset($_SESSION['error']);
+            }
+            else
+                    echo 'Введите коментарий';?>">
             <input class="btn btn-outline-primary " name="<?=$post['id']?>" style="margin-top: 10px" type="submit">
         </form>
     </div>

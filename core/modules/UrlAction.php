@@ -34,8 +34,16 @@ abstract class UrlAction
                     $postID = $key;
                 }
             }
-            Posts::setComentary($postID,$comentaries);
-            header('Location: http://portfolio.ua/post/'.$postID);
+            if(!empty($comentaries))
+            {
+                Posts::setComentary($postID,$comentaries);
+                header('Location: http://portfolio.ua/post/'.$postID);
+            }
+            else{
+                $_SESSION['error'] = 'Комментарий не может быть пустым';
+                header('Location: http://portfolio.ua/post/'.$postID);
+            }
+
 
 
         }
