@@ -23,18 +23,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9858d53f-4d79-4458-9463-a79459722041" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/views/posts/post.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/modules/AccessControl.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/modules/AccessControl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/modules/Authorization.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/modules/Authorization.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/modules/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/modules/Database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/modules/Registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/modules/Registration.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/modules/UrlAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/modules/UrlAction.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/modules/ViewGetter.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/modules/ViewGetter.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/others/Posts.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/others/Posts.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings/access.php" beforeDir="false" afterPath="$PROJECT_DIR$/settings/access.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/main/nav_bar.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/main/nav_bar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/main/posts.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/main/posts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/main/profile.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +90,9 @@
       <workItem from="1598287671237" duration="860000" />
       <workItem from="1598303999044" duration="2161000" />
       <workItem from="1598306281745" duration="28000" />
-      <workItem from="1598343309264" duration="8428000" />
+      <workItem from="1598343309264" duration="8476000" />
+      <workItem from="1598358203615" duration="425000" />
+      <workItem from="1598359429358" duration="11586000" />
     </task>
     <servers />
   </component>
@@ -121,21 +121,21 @@
     </state>
     <state x="713" y="242" key="NewPhpClassDialog/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1598305413835" />
     <state x="2633" y="251" key="NewPhpClassDialog/0.0.1920.1040/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598281750695" />
-    <state x="589" y="468" key="NewPhpFileDialog" timestamp="1598304932211">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2509" y="486" key="NewPhpFileDialog" timestamp="1598361133215">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="589" y="468" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1598304932211" />
-    <state x="2509" y="486" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598283394028" />
+    <state x="2509" y="486" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598361133215" />
     <state x="2592" y="216" key="run.anything.popup" timestamp="1598283698394">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="672" y="208" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1598166540688" />
     <state x="2592" y="216" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598283698394" />
-    <state x="679" y="202" width="672" height="678" key="search.everywhere.popup" timestamp="1598357365074">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2599" y="210" width="672" height="705" key="search.everywhere.popup" timestamp="1598361287206">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="679" y="202" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1598357365074" />
-    <state x="2599" y="210" width="672" height="705" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598283149402" />
+    <state x="2599" y="210" width="672" height="705" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598361287206" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

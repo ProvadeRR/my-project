@@ -24,7 +24,21 @@ abstract class UrlAction
             session_destroy();
             header('Location: http://portfolio.ua');
         }
+        if($url == 'addComentary')
+        {
+            $comentaries = $_POST['comentary'];
+            foreach($_POST as $key => $value)
+            {
+                if(is_int($key))
+                {
+                    $postID = $key;
+                }
+            }
+            Posts::setComentary($postID,$comentaries);
+            header('Location: http://portfolio.ua/post/'.$postID);
 
+
+        }
         if ($url == 'signin') {
             Authorization::getData(); // Получаем данные с формы
             Authorization::Auth(); // Авторизируем
@@ -38,11 +52,24 @@ abstract class UrlAction
         /*            * Работа с шаблонами             */
 
         if (empty($url)) {
-            $array = Posts::getPosts();
+            $array = Posts::getAllPosts();
             ViewGetter::render('Главная страница',true,'views/main/posts.php',$user,$array);
         }
         if ($url == 'authorization') {
             ViewGetter::render('Авторизация',false,'views/sign/authorization.php',$user);
+        }
+        if(preg_match('/^post\/[0-9]+/' ,$url))
+        {
+            $getID = explode('/',$url);
+            $post = Posts::getOnePost($getID[1]);
+            $comentaries = Posts::getComentaries($getID[1]);
+            if(!empty($post))
+            {
+                ViewGetter::render("{$post[0]['title']}",true,'views/posts/post.php',$user,$array = ['post' => $post , 'comentaries' => $comentaries]);
+            }
+            else{
+                header('Location: http://portfolio.ua');
+            }
         }
     }
 }

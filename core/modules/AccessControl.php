@@ -27,12 +27,25 @@ abstract class AccessControl
     public static function UserRigths($rights = ''){
         $accessRight = false;
         $access = include ROOT . '/settings/access.php';
-        for ($i = 0 ; $i<= count($access[$rights]);$i++)
+        if($rights != 'ALL')
         {
-            if(self::$url == $access[$rights][$i]){
-                return true;
+            for ($i = 0 ; $i<= count($access[$rights]);$i++)
+            {
+                if(self::$url == $access[$rights][$i]){
+                    return true;
+                }
             }
         }
+        else{
+            if(preg_match($access['ALL'][0],self::$url) == true)
+            {
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+
 
     }
     public static function getAccess($user){
@@ -40,16 +53,27 @@ abstract class AccessControl
         $userRights = false;
         if(USER == CLASS_GUEST)
         {
-          $userRights = self::UserRigths('GUEST');
+            if(!$userRights = self::UserRigths('ALL'))
+            {
+                $userRights = self::UserRigths('GUEST');
+
+            }
         }
         if(USER == CLASS_DEFAULT_USER)
         {
-            $userRights = self::UserRigths('DEFAULT_USER');
+            if(!$userRights = self::UserRigths('ALL'))
+            {
+                $userRights = self::UserRigths('DEFAULT_USER');
+            }
         }
         if(USER == CLASS_ADMIN)
         {
-            $userRights = self::UserRigths('ADMIN');
+            if(!$userRights = self::UserRigths('ALL'))
+            {
+                $userRights = self::UserRigths('ADMIN');
+            }
         }
+
         return $userRights;
     }
     public static function access($user)

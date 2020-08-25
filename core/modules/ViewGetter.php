@@ -15,7 +15,7 @@ abstract class ViewGetter
     private function __wakeup(){
 
     }
-    public static function render ($title = '',$nav_bar = true,$contentpath = '',$user,$array = [])
+    public static function render ($title = '',$nav_bar = true,$contentpath = '',$user,$array = [],$array_2 = [])
     {
         $translator = require ROOT . '/vendor/libs/translator.php';
         ob_start();

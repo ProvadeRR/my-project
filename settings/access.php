@@ -1,7 +1,9 @@
 <?php
 
 return [
-
+    'ALL' => [
+        '/^post\/[0-9]+/',
+    ],
     'GUEST' => [
         '',
         'authorization',
@@ -10,11 +12,13 @@ return [
     ],
     'DEFAULT_USER' => [
         '',
+        'addComentary',
         'logout',
     ],
     'ADMIN' => [
         '',
         'admin-panel',
+        'addComentary',
         'logout',
 
     ]
