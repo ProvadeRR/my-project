@@ -33,7 +33,7 @@ class Database
     public static function Disconnect(){
         self::$db = null;
     }
-    public static function findOne($sql,$params = [])
+    public static function crud($sql,$params = [])
     {
         self::Connect();
        $stmt = self::$db->prepare($sql);
@@ -41,6 +41,13 @@ class Database
        $result = $stmt->fetch(PDO::FETCH_ASSOC);
        self::Disconnect();
        return $result;
+    }
+    public static function findAll($table = ''){
+        self::Connect();
+        $stmt = self::$db->query("SELECT posts.id, users.name,posts.title,posts.small_text,posts.avaibility,posts.date FROM {$table} INNER JOIN users ON posts.author_id = users.id");
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        self::Disconnect();
+        return $result;
     }
 
 }

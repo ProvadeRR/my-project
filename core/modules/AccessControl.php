@@ -6,8 +6,18 @@ namespace core\modules;
 
 abstract class AccessControl
 {
+
     private static $url;
-    private static $data = [];
+
+    private function __contruct(){
+
+    }
+    private function __clone(){
+
+    }
+    private function __wakeup(){
+
+    }
 
     public static function setQuery($query)
     {

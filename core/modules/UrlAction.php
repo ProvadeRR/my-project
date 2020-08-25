@@ -4,8 +4,19 @@
 namespace core\modules;
 
 
+use core\others\Posts;
+
 abstract class UrlAction
 {
+    private function __contruct(){
+
+    }
+    private function __clone(){
+
+    }
+    private function __wakeup(){
+
+    }
     public static function UrlAction($url, $user){
         /*       * Обработка скриптов        */
 
@@ -27,14 +38,11 @@ abstract class UrlAction
         /*            * Работа с шаблонами             */
 
         if (empty($url)) {
-            ViewGetter::render('Главная страница',true,'views/main/posts.php',$user);
+            $array = Posts::getPosts();
+            ViewGetter::render('Главная страница',true,'views/main/posts.php',$user,$array);
         }
         if ($url == 'authorization') {
             ViewGetter::render('Авторизация',false,'views/sign/authorization.php',$user);
-        }
-        else if($url == 'profile')
-        {
-            ViewGetter::render('Профиль',true,'views/main/profile.php',$user);
         }
     }
 }

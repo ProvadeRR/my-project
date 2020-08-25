@@ -47,14 +47,14 @@ class Authorization extends Database
     }
 
     public static function Auth(){ // Ищем в базе данных , по данным с формы
-        $result = Database::findOne('SELECT * FROM `users` WHERE login  = ? AND password = ?' , [self::$login,self::$password]);
+        $result = Database::crud('SELECT * FROM `users` WHERE login  = ? AND password = ?' , [self::$login,self::$password]);
         if($result != false)
         {
             $_SESSION['auth'] = true;
             $_SESSION['id'] = $result['id'];
         }
         else{
-            $result = Database::findOne('SELECT * FROM `users` WHERE login  = ?' , [self::$login]);
+            $result = Database::crud('SELECT * FROM `users` WHERE login  = ?' , [self::$login]);
             if($result == false)
             {
                 $_SESSION['error'] = 'Пользователь с таким логином не найден';
@@ -71,7 +71,7 @@ class Authorization extends Database
             self::$role = new Guest('','','');
         }
         else{
-            $result = Database::findOne('SELECT * FROM `users` WHERE id  = ?' , [$_SESSION['id']]);
+            $result = Database::crud('SELECT * FROM `users` WHERE id  = ?' , [$_SESSION['id']]);
             if(!empty($result))
             {
                 if($result['role_id'] == DEFAULT_USER)
