@@ -56,9 +56,9 @@ abstract class UrlAction
             Posts::setComentary($postID,$comentaries);
             echo "<script>history.go(-1)</script>";
         }
-
         if(preg_match('/delete\/[0-9]+/' ,$url))
         {
+
             $getID = explode('/',$url);
             if(isset($_GET['access']) == 'true')
             {
@@ -69,16 +69,31 @@ abstract class UrlAction
                         $id = $v;
                     }
                 }
-                $result = Users::deleteUser($id);
-                if($result == false)
+                if($_GET['delete'] == 'users')
                 {
-                    $_SESSION['error'] = 'Вы не можете удалить администратора или не существующего пользователя';
+                    $result = Users::deleteUser($id);
+                    if($result == false)
+                    {
+                        $_SESSION['error'] = 'Вы не можете удалить администратора или не существующего пользователя';
+                    }
+                    else{
+                        $_SESSION['error'] = "Пользователь успешно был удален!";
+                    }
+                    header('Location: http://portfolio.ua/admin-panel/users');
                 }
-                else{
-                    $_SESSION['error'] = "Пользователь успешно был удален!";
+                else if($_GET['delete'] == 'posts')
+                {
+                    $result = Posts::deletePost($id);
+                    if($result == false)
+                    {
+                        $_SESSION['error'] = 'Вы не можете удалить этот пост';
+                    }
+                    else{
+                        $_SESSION['error'] = "Пост был успешно удален!";
+                    }
+                    header('Location: http://portfolio.ua/admin-panel/posts');
                 }
             }
-            header('Location: http://portfolio.ua/admin-panel/users');
 
 
         }
@@ -108,7 +123,6 @@ abstract class UrlAction
         if ($url == 'admin-panel/posts') {
             $posts = Posts::AdminGetAllPosts('SELECT * FROM posts WHERE author_id = ?',[$_SESSION['id']]);
             self::$data['posts'] = $posts;
-
             ViewGetter::render('Список постов','admin',false,'views/admin/posts.php',self::$data);
         }
         if ($url == 'admin-panel/users') {

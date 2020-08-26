@@ -176,6 +176,6 @@
 
 <script>
     function question(a){
-        confirm('Вы подтверждаете удаление пользователя с ID ' + a)?location.href="http://portfolio.ua/admin-panel/delete/"+a + "?access=true":false;
+        confirm('Вы подтверждаете удаление пользователя с ID ' + a)?location.href="http://portfolio.ua/admin-panel/delete/"+a + "?access=true&delete=users":false;
     }
 </script>

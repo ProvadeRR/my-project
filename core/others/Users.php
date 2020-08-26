@@ -9,7 +9,7 @@ use core\modules\Database;
 class Users extends Database
 {
     public static function getAllUsers(){
-        $result = Database::find("SELECT * FROM `users` ORDER BY users.date_registation DESC");
+        $result = Database::get("SELECT * FROM `users` ORDER BY users.date_registation DESC");
         return $result;
     }
     public static  function deleteUser($id){

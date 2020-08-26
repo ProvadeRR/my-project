@@ -9,6 +9,15 @@
 </nav>
 <div id="wrapper"><span>
   <h2 class="text-center" style="margin-bottom: 50px">Список ваших постов</h2>
+         <?php if(isset($_SESSION['error']) && $_SESSION['error'] == 'Вы не можете удалить этот пост'): ?>
+             <div class="alert alert-danger" role="alert">
+                  <?php echo $_SESSION['error']; unset($_SESSION['error']);?>
+            </div>
+         <?php elseif(isset($_SESSION['error'])):?>
+             <div class="alert alert-success" role="alert">
+              <?php echo $_SESSION['error']; unset($_SESSION['error']);?>
+            </div>
+         <?php endif; ?>
         <a class="btn alert-light text-center" href="http://portfolio.ua/admin-panel/create-post" style="height:40px;margin-bottom: 40px;width: 100%">Создать пост</a>
     </span>
     <?php if(!empty($data['posts'])):?>
@@ -20,8 +29,8 @@
                         <li><?=$post['small_text'];?></li>
                     </ul>
                    <div class="d-flex text-center justify-content-around align-items-center">
-                       <button type="button" class="btn btn-lg ">Редактировать</button>
-                       <button type="button" class="btn btn-lg  ">Удалить</button>
+                       <a class="btn btn-lg" type="button">Редактировать</a>
+                       <a class="btn btn-lg" type="button"  onclick="question(<?=$post['id']?>)">Удалить</a>
                    </div>
                 </div>
             </div>
@@ -148,3 +157,9 @@
     table tbody tr:hover {background: #e8f6ff;}
 
 </style>
+
+<script>
+    function question(a){
+        confirm('Вы подтверждаете удаление поста с ID ' + a)?location.href="http://portfolio.ua/admin-panel/delete/"+a + "?access=true&delete=posts":false;
+    }
+</script>

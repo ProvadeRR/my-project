@@ -57,7 +57,7 @@ class Database
        self::Disconnect();
        return $result;
     }
-    public static function find($sql){
+    public static function get($sql){
         self::Connect();
         $stmt = self::$db->query($sql);
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);

@@ -24,6 +24,6 @@ return [
         'admin-panel/create-new-post',
         'admin-panel/posts',
         'admin-panel/users',
-        '/delete\/[0-9]+/'
+        '/delete\/[0-9]+/',
     ]
 ];

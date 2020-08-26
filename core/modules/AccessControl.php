@@ -36,9 +36,13 @@ abstract class AccessControl
                 }
             }
             if($rights == 'ADMIN'){
-                if(preg_match($access[$rights][7],self::$url) == true)
+                if(preg_match($access[$rights][8],self::$url) == true)
                 {
                     return true;
+                }
+                else if(preg_match($access[$rights][9],self::$url) == true)
+                {
+                   return true;
                 }
             }
         }
