@@ -8,11 +8,22 @@
     </ul>
 </nav>
 <div id="wrapper"><span>
-
-        <div class="block-of-text" id="posts" style="display: none;">Отображаемый блок 1</div>
-        <div class="block-of-text" id="users" style="display: none;">Отображаемый блок 2</div>
-
-    </span></div>
+  <h2 class="text-center" style="margin-bottom: 50px">Список ваших постов</h2>
+        <a class="btn alert-light text-center" href="http://portfolio.ua/admin-panel/create-post" style="height:40px;margin-bottom: 40px;width: 100%">Создать пост</a>
+    </span>
+    <div class="card mb-4 shadow-sm">
+        <div class="card-body">
+            <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+                <li>10 users included</li>
+                <li>2 GB of storage</li>
+                <li>Email support</li>
+                <li>Help center access</li>
+            </ul>
+            <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
+        </div>
+    </div>
+</div>
 
 <style>
     @import url("https://fonts.googleapis.com/css?family=Open+Sans");
@@ -122,10 +133,14 @@
     }
 
     #wrapper {
-        margin: 0 0 0 500px;
-        padding: 15px;
+        margin: 0 0 0 290px;
+        padding: 50px;
         color: #aaa;
     }
+    table {width: 100%; border-collapse: collapse;}
+    table td {padding: 12px 16px;}
+    table thead tr {font-weight: bold; border-top: 1px solid #e8e9eb;}
+    table tr {border-bottom: 1px solid #e8e9eb;}
+    table tbody tr:hover {background: #e8f6ff;}
 
 </style>
-

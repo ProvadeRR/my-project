@@ -15,8 +15,9 @@ abstract class ViewGetter
     private function __wakeup(){
 
     }
-    public static function render ($title = '',$layout = 'default',$nav_bar = true,$contentpath = '',$data = [])
+    public static function render ($title = '',$layout = '',$nav_bar = true,$contentpath = '',$data = [])
     {
+        if(empty($layout)) { $layout = 'default'; }
         $translator = require ROOT . '/vendor/libs/translator.php';
         ob_start();
         if($nav_bar == true)
@@ -33,8 +34,9 @@ abstract class ViewGetter
             $content = ob_get_contents();
         }
     }
-    public static function Layout($title = 'portfolio.ua',$layout = 'default')
+    public static function Layout($title = 'portfolio.ua',$layout)
     {
+
         include ROOT . "/views/layouts/{$layout}.php";
     }
 }

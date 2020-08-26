@@ -72,6 +72,10 @@ class Authorization extends Database
         }
         else{
             $result = Database::crud('SELECT * FROM `users` WHERE id  = ?' , [$_SESSION['id']]);
+            if($result == false)
+            {
+                session_destroy();
+            }
             if(!empty($result))
             {
                 if($result['role_id'] == DEFAULT_USER)

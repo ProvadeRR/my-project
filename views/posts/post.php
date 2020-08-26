@@ -2,13 +2,14 @@
     if($post['avaibility'] == true):?>
     <div class="container ">
                 <h1 class='display-4 text-center align-items-center''><?=$post['title'];?></h1>
+                <img class="text-center lead" style="width: 1150px" src="<?php echo '../../public/' . $post['title_image'];?>">
                 <p class='lead''><?=$post['text'];?></p>
                 <hr class='my-4''>
                 <div class="div d-flex justify-content-between ">
                     <p class="text-left">Дата создания: <?=$post['date']?></p>
                     <p class="text-right">Автор: <?=$post['name']?></p>
                 </div>
-    <?php if(empty($data['object']->getName())){echo 'Авторизируйтесь , чтобы писать коментарии';}else{?>
+    <?php if(empty($data['object']->getName())){echo "<div class='comentaries' style='margin-top: 150px;'><a href='http://portfolio.ua/authorization'>Авторизируйтесь</a> , чтобы писать коментарии</div>";}else{?>
             <div class="comentaries" style="margin-top: 150px">
                 <form action="../addComentary" method="post">
                     <input type="text" id="inputLogin" autocomplete="off" name='comentary' class="form-control" placeholder="Введите комментарий" required="">

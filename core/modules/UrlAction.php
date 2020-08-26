@@ -5,6 +5,7 @@ namespace core\modules;
 
 
 use core\others\Posts;
+use core\others\Users;
 
 abstract class UrlAction
 {
@@ -41,6 +42,32 @@ abstract class UrlAction
             Posts::setComentary($postID,$comentaries);
             echo "<script>history.go(-1)</script>";
         }
+
+        if(preg_match('/[delete]\/[0-9]+/' ,$url))
+        {
+            $getID = explode('/',$url);
+            if(isset($_GET['access']) == 'true')
+            {
+                foreach ($getID as $k => $v)
+                {
+                    if(preg_match('/[0-9]+/' , $v))
+                    {
+                        $id = $v;
+                    }
+                }
+                $result = Users::deleteUser($id);
+                if($result == false)
+                {
+                    $_SESSION['error'] = 'Вы не можете удалить администратора или не существующего пользователя';
+                }
+                else{
+                    $_SESSION['error'] = "Пользователь успешно был удален!";
+                }
+            }
+            header('Location: http://portfolio.ua/admin-panel/users');
+
+
+        }
         if ($url == 'signin') {
             Authorization::getData(); // Получаем данные с формы
             Authorization::Auth(); // Авторизируем
@@ -51,7 +78,7 @@ abstract class UrlAction
             }
         }
 
-        /*            * Работа с шаблонами             */
+        /*            * Работа с видами             */
 
         if (empty($url)) {
             $posts = Posts::getAllPosts();
@@ -64,7 +91,18 @@ abstract class UrlAction
         if ($url == 'admin-panel') {
             ViewGetter::render('Административная панель','admin',false,'views/admin/panel.php',self::$data);
         }
-        if(preg_match('/^post\/[0-9]+/' ,$url))
+        if ($url == 'admin-panel/posts') {
+            ViewGetter::render('Список постов','admin',false,'views/admin/posts.php',self::$data);
+        }
+        if ($url == 'admin-panel/users') {
+            $users = Users::getAllUsers();
+            self::$data['users'] = $users;
+            ViewGetter::render('Пользователи сайта','admin',false,'views/admin/users.php',self::$data);
+        }
+        if ($url == 'admin-panel/create-post') {
+            ViewGetter::render('Создать пост','admin',false,'views/admin/create-post.php',self::$data);
+        }
+        if(preg_match('/[post]\/[0-9]+/' ,$url))
         {
             $getID = explode('/',$url);
             $post = Posts::getOnePost($getID[1]);
@@ -73,11 +111,12 @@ abstract class UrlAction
             self::$data['comentaries'] = $comentaries;
             if(!empty($post))
             {
-                ViewGetter::render(self::$data['post']['title'],'',true,'views/posts/post.php',self::$data);
+                ViewGetter::render(self::$data['post'][0]['title'],'',true,'views/posts/post.php',self::$data);
             }
             else{
                 header('Location: http://portfolio.ua');
             }
         }
+
     }
 }

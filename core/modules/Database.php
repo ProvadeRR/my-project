@@ -33,9 +33,10 @@ class Database
     public static function Disconnect(){
         self::$db = null;
     }
-    public static function set($sql){
+    public static function set($sql,$params = []){
         self::Connect();
-        $stmt = self::$db->query($sql);
+        $stmt = self::$db->prepare($sql);
+        $stmt->execute($params);
         self::Disconnect();
         return $stmt;
     }

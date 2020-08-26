@@ -8,11 +8,51 @@
     </ul>
 </nav>
 <div id="wrapper"><span>
+        <h2 class="text-center" style="margin-bottom: 50px">Список пользователей</h2>
+        <?php if(isset($_SESSION['error']) && $_SESSION['error'] == 'Вы не можете удалить администратора или не существующего пользователя'): ?>
+            <div class="alert alert-danger" role="alert">
+                  <?php echo $_SESSION['error']; unset($_SESSION['error']);?>
+            </div>
+        <?php elseif(isset($_SESSION['error'])):?>
+          <div class="alert alert-success" role="alert">
+              <?php echo $_SESSION['error']; unset($_SESSION['error']);?>
+            </div>
+        <?php endif; ?>
+        <table>
+        <thead>
+    <tr>
+      <td>Имя</td>
+      <td>Фамилия</td>
+        <td>Дата рождения</td>
+        <td>Дата регистрации</td>
+        <td>Роль</td>
+         <td>Действие</td>
 
-        <div class="block-of-text" id="posts" style="display: none;">Отображаемый блок 1</div>
-        <div class="block-of-text" id="users" style="display: none;">Отображаемый блок 2</div>
+    </tr>
+  </thead>
+              <tbody>
+        <?php foreach ($data['users'] as $user ): ?>
+    <tr>
+      <td><?=$user['name'];?></td>
+      <td><?=$user['surname'];?></td>
+        <td><?=$user['date_birthday'];?></td>
+      <td><?=$user['date_registation'];?></td>
+        <td><?php if($user['role_id'] == '1'){echo "Пользователь";}else if($user['role_id'] == 2){echo "Администратор";}?></td>
+         <td><div class="div">
+              <?php if($user['role_id'] != 2): ?>
+                  <a  href="edit/<?php echo $user['id']?>"><img src="../../public/uploads/edit.png" style="height: 30px;width: 30px" alt=""></a>
+                 <a onclick="question(<?=$user['id']?>)"><img src="../../public/uploads/delete.png" style="height: 30px;width: 30px" alt=""></a>
+                 <?php endif;?>
+             </div>
+         </td>
+    </tr>
 
-    </span></div>
+
+        <?php endforeach;?>
+  </tbody>
+        </table>
+    </span>
+</div>
 
 <style>
     @import url("https://fonts.googleapis.com/css?family=Open+Sans");
@@ -122,10 +162,20 @@
     }
 
     #wrapper {
-        margin: 0 0 0 500px;
-        padding: 15px;
+        margin: 0 0 0 290px;
+        padding: 50px;
         color: #aaa;
     }
+    table {width: 100%; border-collapse: collapse;}
+    table td {padding: 12px 16px;}
+    table thead tr {font-weight: bold; border-top: 1px solid #e8e9eb;}
+    table tr {border-bottom: 1px solid #e8e9eb;}
+    table tbody tr:hover {background: #e8f6ff;}
 
 </style>
 
+<script>
+    function question(a){
+        confirm('Вы подтверждаете удаление пользователя с ID ' + a)?location.href="http://portfolio.ua/admin-panel/delete/"+a + "?access=true":false;
+    }
+</script>
