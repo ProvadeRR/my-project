@@ -21,6 +21,7 @@ return [
         'addComentary',
         'logout',
         'admin-panel/create-post',
+        'admin-panel/create-new-post',
         'admin-panel/posts',
         'admin-panel/users',
         '/delete\/[0-9]+/'

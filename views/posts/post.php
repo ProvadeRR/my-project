@@ -1,4 +1,4 @@
-<?php foreach ($data['post'] as $post):
+<?php  foreach ($data['post'] as $post):
     if($post['avaibility'] == true):?>
     <div class="container ">
                 <h1 class='display-4 text-center align-items-center''><?=$post['title'];?></h1>

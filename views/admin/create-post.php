@@ -9,9 +9,29 @@
 </nav>
 <div id="wrapper"><span>
 
-        <div class="block-of-text" id="posts" style="display: none;">Отображаемый блок 1</div>
-        <div class="block-of-text" id="users" style="display: none;">Отображаемый блок 2</div>
-
+        <h2 class="text-center" style="margin-bottom: 50px">Создание поста</h2>
+        <form action="create-new-post" method="POST" enctype="multipart/form-data">
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Введите заголовок</label>
+    <input type="text" class="form-control" name="title" id="inputTitle" placeholder="Например: Новость спорта" required="">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Введите текст для главной страницы</label>
+    <textarea class="form-control" name="small_text" id="exampleFormControlTextarea1" rows="3" ></textarea>
+  </div>
+            <div class="form-group">
+    <label for="exampleFormControlTextarea1">Выберите картинку</label>
+    <input type="file" name="title_image">
+  </div>
+            <div class="form-group">
+    <label for="exampleFormControlTextarea1">Введите полный текст</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" name="text" rows="3" style="resize: vertical;height: 200px" required=""></textarea>
+           <div class="d-flex text-center justify-content-between align-items-center">
+                    <a href="http://portfolio.ua/admin-panel/posts" class="btn btn-outline-light">Вернуться назад</a>
+                    <input type="submit"  class="btn btn-outline-light" style="margin-top:10px;" id="inputSubtitle" value="Создать пост" >
+            </div>
+  </div>
+</form>
     </span></div>
 
 <style>
@@ -122,10 +142,14 @@
     }
 
     #wrapper {
-        margin: 0 0 0 500px;
-        padding: 15px;
+        margin: 0 0 0 290px;
+        padding: 50px;
         color: #aaa;
     }
+    table {width: 100%; border-collapse: collapse;}
+    table td {padding: 12px 16px;}
+    table thead tr {font-weight: bold; border-top: 1px solid #e8e9eb;}
+    table tr {border-bottom: 1px solid #e8e9eb;}
+    table tbody tr:hover {background: #e8f6ff;}
 
 </style>
-

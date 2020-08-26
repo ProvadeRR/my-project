@@ -40,6 +40,14 @@ class Database
         self::Disconnect();
         return $stmt;
     }
+    public static function getAll($sql,$params = []){
+        self::Connect();
+        $stmt = self::$db->prepare($sql);
+        $stmt->execute($params);
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        self::Disconnect();
+        return $result;
+    }
     public static function crud($sql,$params = [])
     {
         self::Connect();

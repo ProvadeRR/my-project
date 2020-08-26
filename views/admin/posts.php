@@ -11,18 +11,22 @@
   <h2 class="text-center" style="margin-bottom: 50px">Список ваших постов</h2>
         <a class="btn alert-light text-center" href="http://portfolio.ua/admin-panel/create-post" style="height:40px;margin-bottom: 40px;width: 100%">Создать пост</a>
     </span>
-    <div class="card mb-4 shadow-sm">
-        <div class="card-body">
-            <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
-            <ul class="list-unstyled mt-3 mb-4">
-                <li>10 users included</li>
-                <li>2 GB of storage</li>
-                <li>Email support</li>
-                <li>Help center access</li>
-            </ul>
-            <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
-        </div>
-    </div>
+    <?php if(!empty($data['posts'])):?>
+    <?php foreach ($data['posts'] as $post): ?>
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title"><?=$post['title']?></small></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li><?=$post['small_text'];?></li>
+                    </ul>
+                   <div class="d-flex text-center justify-content-around align-items-center">
+                       <button type="button" class="btn btn-lg ">Редактировать</button>
+                       <button type="button" class="btn btn-lg  ">Удалить</button>
+                   </div>
+                </div>
+            </div>
+    <?php endforeach;?>
+    <?php endif; ?>
 </div>
 
 <style>

@@ -29,6 +29,20 @@ abstract class UrlAction
             session_destroy();
             header('Location: http://portfolio.ua');
         }
+        if ($url == 'admin-panel/create-new-post') {
+            if(empty($_POST['text']) && empty($_POST['title']))
+            {
+                $_SESSION['create-post'] = 'Не удалось создать пост';
+            }
+            else{
+                $name =  $_FILES['title_image']['name'];
+                move_uploaded_file($_FILES['title_image']['tmp_name'], '../public/uploads/'.$name);
+                $image = 'uploads/' . $name ;
+                Posts::setPost($_POST['title'],$image,$_POST['small_text'],$_POST['text']);
+                $_SESSION['create-post'] = 'Вы успешно создали пост';
+            }
+            echo "<script>history.go(-2)</script>";
+        }
         if($url == 'addComentary')
         {
             $comentaries = $_POST['comentary'];
@@ -43,7 +57,7 @@ abstract class UrlAction
             echo "<script>history.go(-1)</script>";
         }
 
-        if(preg_match('/[delete]\/[0-9]+/' ,$url))
+        if(preg_match('/delete\/[0-9]+/' ,$url))
         {
             $getID = explode('/',$url);
             if(isset($_GET['access']) == 'true')
@@ -72,7 +86,7 @@ abstract class UrlAction
             Authorization::getData(); // Получаем данные с формы
             Authorization::Auth(); // Авторизируем
             if (Authorization::getAuth()) {
-                header('Location: http://portfolio.ua');
+                header('Location: http://portfolio.ua/');
             } else {
                 header('Location: http://portfolio.ua/authorization');
             }
@@ -83,7 +97,7 @@ abstract class UrlAction
         if (empty($url)) {
             $posts = Posts::getAllPosts();
             self::$data['posts']= $posts;
-            ViewGetter::render('Главная страница', '' , true,'views/main/posts.php',self::$data);
+           ViewGetter::render('Главная страница', '' , true,'views/main/posts.php',self::$data);
         }
         if ($url == 'authorization') {
             ViewGetter::render('Авторизация','',false,'views/sign/authorization.php',self::$data);
@@ -92,6 +106,9 @@ abstract class UrlAction
             ViewGetter::render('Административная панель','admin',false,'views/admin/panel.php',self::$data);
         }
         if ($url == 'admin-panel/posts') {
+            $posts = Posts::AdminGetAllPosts('SELECT * FROM posts WHERE author_id = ?',[$_SESSION['id']]);
+            self::$data['posts'] = $posts;
+
             ViewGetter::render('Список постов','admin',false,'views/admin/posts.php',self::$data);
         }
         if ($url == 'admin-panel/users') {
